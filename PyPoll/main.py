@@ -6,7 +6,7 @@ candidateVotes = {}
 maxPercent = 0
 winner = ""
 
-csvPath = os.path.join('.', 'PyPoll', 'Resources', 'election_data.csv')
+csvPath = os.path.join('.', 'Resources', 'election_data.csv')
 
 with open(csvPath) as csvFile:
     csvReader = csv.reader(csvFile, delimiter=',')
@@ -27,7 +27,7 @@ with open(csvPath) as csvFile:
         print(candidate,": ",candidateVotes[candidate][1],"% (",candidateVotes[candidate][0],")")
     print("Winner: ",winner)
 
-txtPath = os.path.join('.', 'PyPoll', 'Resources', 'election_data.txt')
+txtPath = os.path.join('.', 'Resources', 'election_data.txt')
 
 with open(txtPath, 'w') as txtFile:
     txtWriter = csv.writer(txtFile)

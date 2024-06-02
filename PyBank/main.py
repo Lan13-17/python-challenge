@@ -8,7 +8,7 @@ avgChange = 0
 maxIncrease = ['Month',0]
 maxDecrease = ['Month',0]
 
-csvPath = os.path.join('.', 'PyBank', 'Resources', 'budget_data.csv')
+csvPath = os.path.join('.', 'Resources', 'budget_data.csv')
 
 with open(csvPath) as csvFile:
     csvReader = csv.reader(csvFile, delimiter=',')
@@ -33,7 +33,7 @@ with open(csvPath) as csvFile:
 
 print("Total Months: ",totalMonths,"\nNet Total: $",net,"\nAverage Change: $",avgChange,"\nGreatest Increase in Profits: ",maxIncrease[0]," ($",maxIncrease[1],")\nGreatest Decrease in Profits: ",maxDecrease[0]," ($",maxDecrease[1],")")
 
-txtPath = os.path.join('.', 'PyBank', 'Resources', 'budget_data.txt')
+txtPath = os.path.join('.', 'Resources', 'budget_data.txt')
 
 with open(txtPath, 'w') as txtFile:
     txtWriter = csv.writer(txtFile)
